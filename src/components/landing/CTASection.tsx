@@ -18,18 +18,18 @@ const CTASection = () => {
             Join thousands of K-pop fans creating amazing photo experiences with our digital photobooth platform
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-white text-purple-700 hover:bg-white/90"
               asChild
             >
-              <Link href="/kpop-photo-booth">
+              <Link href="https://idealphoto.net/">
                 Try K-pop Booth <ChevronRight className="ml-1" />
               </Link>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white/10"
               asChild
             >
@@ -38,7 +38,7 @@ const CTASection = () => {
               </Link>
             </Button>
           </div>
-          
+
           <div className="mt-8 flex items-center justify-center text-white/80 text-sm">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400 mr-1" />
             <span className="mr-2">5.0 rating from 1000+ users</span>

@@ -22,16 +22,16 @@ const HeroSection = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { 
+      transition: {
         staggerChildren: 0.15
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -48,7 +48,7 @@ const HeroSection = () => {
       }
     }
   };
-  
+
   const scrollToHowItWorks = () => {
     document.getElementById('how-it-works')?.scrollIntoView({
       behavior: 'smooth'
@@ -60,7 +60,7 @@ const HeroSection = () => {
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6] via-[#D946EF] to-[#EC4899] opacity-90"></div>
       <div className="absolute inset-0 bg-[url('/lovable-uploads/3fc22a76-7d7a-4617-b0df-6998c07b60ea.png')] bg-cover bg-center opacity-10"></div>
-      
+
       {/* Animated circles */}
       <div className="absolute top-20 left-10 w-80 h-80 rounded-full bg-pink-300 opacity-20 blur-3xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-violet-300 opacity-20 blur-3xl animate-pulse" style={{
@@ -71,7 +71,7 @@ const HeroSection = () => {
         animationDelay: '0.5s',
         animationDuration: '8s'
       }}></div>
-      
+
       <div className="container mx-auto px-4 md:px-6 py-28 md:py-36 relative z-10">
         <motion.div
           ref={ref}
@@ -87,35 +87,35 @@ const HeroSection = () => {
                 <span>NEW: Enhanced K-pop Booth Available!</span>
               </div>
             </motion.div>
-            
-            <motion.h1 
-              id="hero-heading" 
+
+            <motion.h1
+              id="hero-heading"
               className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight"
               variants={itemVariants}
             >
               Create Magical<br />
               <span className="bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">Photo Memories</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-lg md:text-xl text-white/80 mb-8 max-w-lg mx-auto md:mx-0"
               variants={itemVariants}
             >
               Take stunning virtual photo booth pictures with your favorite idols. Customize, create, and share your perfect moments in seconds.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
               variants={itemVariants}
             >
-              <Link href="/kpop-photo-booth" aria-label="Start creating photos">
+              <Link href="https://idealphoto.net/" aria-label="Start creating photos">
                 <Button size="lg" className="w-full sm:w-auto bg-white text-[#8B5CF6] hover:bg-white/90 shadow-lg transition-all hover:shadow-xl">
                   Start Creating Now
                 </Button>
               </Link>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 onClick={scrollToHowItWorks}
                 className="w-full sm:w-auto bg-transparent border-white text-white hover:bg-white/10"
                 aria-label="Learn how the photo booth works"
@@ -123,9 +123,9 @@ const HeroSection = () => {
                 See How It Works
               </Button>
             </motion.div>
-            
+
             {/* Feature indicators with icons */}
-            <motion.div 
+            <motion.div
               className="mt-10 flex flex-wrap justify-center md:justify-start gap-3"
               variants={itemVariants}
             >
@@ -146,9 +146,9 @@ const HeroSection = () => {
                 <span className="text-white text-sm">4 Booth Styles</span>
               </div>
             </motion.div>
-            
+
             {/* Premium badge */}
-            <motion.div 
+            <motion.div
               className="mt-12 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/20"
               variants={itemVariants}
             >
@@ -161,7 +161,7 @@ const HeroSection = () => {
               </div>
             </motion.div>
           </div>
-          
+
           <motion.div
             className="relative hidden md:block"
             variants={itemVariants}
@@ -177,7 +177,7 @@ const HeroSection = () => {
               >
                 <img alt="K-pop photo strip example" className="w-full h-auto rounded-lg" src="/lovable-uploads/3fc22a76-7d7a-4617-b0df-6998c07b60ea.png" />
               </motion.div>
-              
+
               <motion.div
                 className="absolute top-20 right-20 w-64 shadow-xl rounded-lg transform -rotate-3 z-20 overflow-hidden"
                 initial={{ y: 0 }}
@@ -187,7 +187,7 @@ const HeroSection = () => {
               >
                 <img alt="K-pop idol sample" className="w-full h-auto rounded-lg" src="/lovable-uploads/95c01b04-2c56-4d10-8223-831f4995f862.png" />
               </motion.div>
-              
+
               <motion.div
                 className="absolute top-40 right-40 w-64 shadow-xl rounded-lg transform rotate-12 z-10 overflow-hidden"
                 initial={{ y: 0 }}
@@ -197,7 +197,7 @@ const HeroSection = () => {
               >
                 <img alt="K-pop idol sample" className="w-full h-auto rounded-lg" src="/lovable-uploads/036b7ff5-1d94-44f6-982f-2306826a8053.png" />
               </motion.div>
-              
+
               {/* Enhanced decorative elements */}
               <motion.div
                 className="absolute bottom-20 left-10 h-20 w-20 rounded-full bg-gradient-to-br from-pink-400 to-purple-600 opacity-80"
@@ -205,17 +205,17 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               />
-              
+
               <motion.div
-                className="absolute top-10 left-20 h-12 w-12 rounded-full bg-gradient-to-br from-indigo-400 to-blue-600 opacity-80" 
+                className="absolute top-10 left-20 h-12 w-12 rounded-full bg-gradient-to-br from-indigo-400 to-blue-600 opacity-80"
                 variants={floatingVariants}
                 initial="initial"
                 animate="animate"
                 transition={{ delay: 1 }}
               />
-              
+
               {/* Added floating buttons */}
-              <motion.div 
+              <motion.div
                 className="absolute bottom-10 right-10 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg transform rotate-3 z-40"
                 whileHover={{ scale: 1.05, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -229,7 +229,7 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-0 right-0 flex justify-center">
         <motion.button
@@ -243,7 +243,7 @@ const HeroSection = () => {
           <ChevronDown className="h-8 w-8 animate-bounce" />
         </motion.button>
       </div>
-      
+
       {/* Wave divider */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="#f9fafb" preserveAspectRatio="none" aria-hidden="true">
