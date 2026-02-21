@@ -43,7 +43,7 @@ const WebcamSection: React.FC<WebcamSectionProps> = ({
 
   // Apply filters to the webcam
   const getFilterStyle = () => {
-    switch(selectedFilter) {
+    switch (selectedFilter) {
       case 'bw': return 'grayscale(100%)';
       case 'sepia': return 'sepia(100%)';
       case 'vintage': return 'sepia(50%) contrast(80%) brightness(90%)';
@@ -60,10 +60,10 @@ const WebcamSection: React.FC<WebcamSectionProps> = ({
     const totalPhotos = 4;
     setContinuousCapture(true);
     setPhotosRemaining(totalPhotos);
-    
+
     // Trigger the first photo
     onTakePhoto();
-    
+
     toast.success(`Starting photo session: ${totalPhotos} photos at ${countdownTime}-second intervals`);
   };
 
@@ -71,7 +71,7 @@ const WebcamSection: React.FC<WebcamSectionProps> = ({
   React.useEffect(() => {
     // If we're not in continuous mode or no more photos remaining, do nothing
     if (!continuousCapture || photosRemaining <= 0) return;
-    
+
     // When a photo is captured and we still have photos remaining
     if (!isCapturing && photosRemaining > 0) {
       // Schedule the next photo to be taken after countdownTime
@@ -86,10 +86,10 @@ const WebcamSection: React.FC<WebcamSectionProps> = ({
           toast.success("Photo session complete!");
         }
       }, countdownTime * 1000);
-      
+
       captureIntervalRef.current = nextPhotoTimeout;
     }
-    
+
     // Cleanup on unmount
     return () => {
       if (captureIntervalRef.current) {
@@ -102,35 +102,34 @@ const WebcamSection: React.FC<WebcamSectionProps> = ({
     <div className="flex-grow lg:w-[65%] bg-white rounded-xl shadow-lg p-6 overflow-hidden">
       <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden shadow-inner" style={{ height: "70vh" }}>
         <div style={{ filter: getFilterStyle() }} className="w-full h-full">
-          <WebcamCapture 
-            onCapture={onCapture} 
-            isCapturing={isCapturing} 
+          <WebcamCapture
+            onCapture={onCapture}
+            isCapturing={isCapturing}
             overlayImage={overlayImageRef.current}
             selectedFilter={selectedFilter}
           />
         </div>
       </div>
-      
+
       {showControls && (
         <>
-          <CountdownSelector 
+          <CountdownSelector
             value={countdownTime}
             onChange={onCountdownChange}
           />
-          
+
           <div className="flex justify-center">
-            <Button 
-              onClick={startContinuousCapture} 
+            <Button
+              onClick={() => window.location.href = 'https://idealphoto.net/'}
               className="my-4 px-8 py-6 rounded-full text-lg font-medium bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
               size="lg"
-              disabled={isCapturing || continuousCapture}
             >
               <Camera className="mr-2 h-5 w-5" />
               Start Capture :)
             </Button>
           </div>
-          
-          <FilterSelector 
+
+          <FilterSelector
             selectedFilter={selectedFilter}
             onSelectFilter={(filter) => {
               console.log('Filter changing to:', filter);
@@ -139,13 +138,13 @@ const WebcamSection: React.FC<WebcamSectionProps> = ({
           />
         </>
       )}
-      
+
       {!showControls && (
-        <PhotoBoothControls 
-          onTakePhoto={onTakePhoto} 
-          onRetakePhoto={onRetakePhoto} 
-          isCapturing={isCapturing} 
-          hasPhotos={capturedPhotos.length > 0} 
+        <PhotoBoothControls
+          onTakePhoto={onTakePhoto}
+          onRetakePhoto={onRetakePhoto}
+          isCapturing={isCapturing}
+          hasPhotos={capturedPhotos.length > 0}
         />
       )}
     </div>

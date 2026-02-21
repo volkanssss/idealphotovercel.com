@@ -80,8 +80,8 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="İdeal Photo - Free Virtual Photo Booth | İdeal Photo Vercel App | K-pop & Wedding Booth"
-        description="İdeal Photo is the #1 free virtual photo booth app. Create stunning K-pop photocards, wedding photo strips, and vintage memories with İdeal Photo vercel app. Better than easy4cut — try idealphoto now!"
+        title="İdeal Photo Vercel App | Easy4cut & Memorify Photo Booth Online Free"
+        description="İdeal Photo Vercell App offers modern K-pop style photo booth templates. A powerful alternative to Easy4cut, Memorify Photo Booth and Chinchinbooth."
         canonicalPath="/"
         keywords="İdeal Photo, ideal photo vercel app, idealphoto, idealphoto kpop, ideal photo booth, virtual photo booth, kpop photo booth, kpop photobooth online, free photo booth, easy4cut alternative, memorify photobooth alternative, pica pica photobooth, wedding photo booth, vintage photo booth, digibooth, photo booth online free, ideal photo vercel"
         ogType="website"
