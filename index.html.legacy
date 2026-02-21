@@ -1,0 +1,21 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="google-site-verification" content="lWI-svoNOSDJuqGM1uzShfPyqhAyArWAa-F5S3I-Igw" />
+    
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İdeal Photo - AI-Powered Virtual Photo Booth</title>
+    <meta name="description" content="Create stunning virtual photo booth pictures with İdeal Photo. Professional quality results, K-pop themes, vintage styles, and more. Free to start!" />
+    <meta name="keywords" content="virtual photo booth, online photo booth, kpop photo booth, photo booth maker, digital photo booth" />
+    <meta name="author" content="İdeal Photo" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://idealphotovercel.com" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+
+User-agent: *
+Allow: /
+
+# Important pages for crawling
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /pricing
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /cookie-policy
+Allow: /kpop-photobooth
+Allow: /vintage-photobooth
+Allow: /digibooth
+Allow: /wedding-photobooth
+Allow: /pica-pica-photobooth
+Allow: /blog
+Allow: /sitemap
+
+# Sitemap location
+Sitemap: https://idealphotovercel.com/sitemap.xml
+
+# Allow Google AdSense crawlers
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+Allow: *.js
+Allow: *.css
+
+# Allow all static assets
+Allow: /static/
+Allow: *.js
+Allow: *.css
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+Allow: *.ico
+
+# Crawl-delay for politeness
+Crawl-delay: 1
