@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Camera, Download, Share2, Sparkles, Star, Heart, Zap, Image, Palette } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { RelatedBooths } from '@/components/seo/RelatedBooths';
 
 const easy4cutStructuredData = {
   "@context": "https://schema.org",
@@ -287,6 +288,8 @@ const Easy4CutPhotobooth = () => {
             </p>
           </div>
         </section>
+
+        <RelatedBooths />
       </PhotoboothLayout>
     </>
   );

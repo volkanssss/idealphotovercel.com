@@ -12,6 +12,10 @@ import HowItWorksSection from '@/components/landing/HowItWorksSection';
 import FeatureHighlights from '@/components/landing/sections/FeatureHighlights';
 import HomepageFAQ from '@/components/landing/HomepageFAQ';
 import HomepageTestimonials from '@/components/landing/HomepageTestimonials';
+import { RelatedBooths } from '@/components/seo/RelatedBooths';
+import { FAQSection } from '@/components/seo/FAQSection';
+import { SchemaMarkup } from '@/components/seo/SchemaMarkup';
+import { ReviewSchema } from '@/components/seo/ReviewSchema';
 
 const homepageStructuredData = {
   "@context": "https://schema.org",
@@ -41,34 +45,34 @@ const faqStructuredData = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is İdeal Photo?",
+      "name": "What is the best alternative to Easy4Cut?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "İdeal Photo is a free online virtual photo booth that lets you create professional-quality photo strips with K-pop, wedding, vintage, and digital themes. Access İdeal Photo vercel app at idealphotovercel.com."
+        "text": "İdeal Photo is considered the best free alternative to Easy4Cut, offering similar 4-cut photo strip layouts with more customization, better privacy, and no fees."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I use İdeal Photo vercel app?",
+      "name": "Is there a free Memorify Photo Booth alternative online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Visit idealphotovercel.com on any browser, choose your theme, allow camera access, take photos, customize with frames and filters, then download or share. No registration needed."
+        "text": "Yes, İdeal Photo provides a free Memorify-style experience with romantic frames and heartfelt designs perfect for couples and friends, without the need for registration."
       }
     },
     {
       "@type": "Question",
-      "name": "Is İdeal Photo free?",
+      "name": "How is İdeal Photo vercel app different from other booths?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, İdeal Photo is completely free with unlimited photos, all themes, no watermarks, and no registration required."
+        "text": "İdeal Photo specializes in K-pop style photocards and classic 4-cut strips. Our vercel app works entirely in your browser without storing your personal photos, ensuring 100% privacy."
       }
     },
     {
       "@type": "Question",
-      "name": "Is İdeal Photo better than easy4cut?",
+      "name": "Can I use İdeal Photo for K-pop photocards?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "İdeal Photo offers more features than easy4cut including multiple booth themes, better privacy, more customization options, and it's completely free with no limitations."
+        "text": "Absolutely! Our K-pop photobooth section offers specific frames and filters designed for K-pop fans to create high-quality idol-style photocards and strips."
       }
     }
   ]
@@ -162,7 +166,15 @@ const Index = () => {
 
         <HomepageFAQ />
 
+        <FAQSection />
+
+        <RelatedBooths />
+
         <HomepageSEOSection />
+
+        {/* Global Schema Markup */}
+        <SchemaMarkup />
+        <ReviewSchema />
 
         {/* FAQ Schema for Google Rich Results */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />

@@ -11,6 +11,7 @@ import KpopPricing from '@/components/kpop/KpopPricing';
 import KpopCTA from '@/components/kpop/KpopCTA';
 import KpopSEOSection from '@/components/kpop/KpopSEOSection';
 import useKpopState from '@/hooks/useKpopState';
+import { RelatedBooths } from '@/components/seo/RelatedBooths';
 import { downloadPhotoStrip } from '@/utils/downloadPhotoStrip';
 import { toast } from 'sonner';
 import { FrameTheme } from '@/components/digibooth/BorderStyleSelector';
@@ -104,6 +105,7 @@ const KpopPhotobooth = () => {
         <KpopPricing />
         <KpopCTA />
         <KpopSEOSection />
+        <RelatedBooths />
       </PhotoboothLayout>
     </>
   );
